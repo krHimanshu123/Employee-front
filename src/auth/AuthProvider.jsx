@@ -25,6 +25,7 @@ export function AuthProvider({ children }) {
   function hasRole(reqRoles) {
     if (!user) return false;
     if (!Array.isArray(reqRoles)) reqRoles = [reqRoles];
+    
     return reqRoles.some(r => user.roles.includes(r) || user.roles.includes('ROLE_ADMIN'));
   }
 
