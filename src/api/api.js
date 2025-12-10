@@ -23,6 +23,7 @@ api.interceptors.request.use((config) => {
 export async function register(payload, role = 'ROLE_ATTENDEE') {
   // backend expects ?role=ROLE_X (your controller uses @RequestParam role)
   const roleQ = role ? `?role=${encodeURIComponent(role)}` : '';
+  
   return api.post(`/auth/register${roleQ}`, payload).then(r => r.data);
 }
 
