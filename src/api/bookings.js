@@ -13,6 +13,7 @@ export const createFreeBooking = (eventId, ticketTypeId) =>
  * Endpoint: POST /bookings/create -> returns { bookingId }
  */
 export const createPendingBooking = (ticketTypeId, quantity = 1) =>
+  
   api.post("/bookings/create", { ticketTypeId, quantity });
 
 export const getBooking = (bookingId) => api.get(`/bookings/${bookingId}`);
