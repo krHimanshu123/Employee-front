@@ -7,6 +7,7 @@ export function fetchEventTicketTypes(eventId) { return api.get(`/events/${event
 
 export function fetchOrganizerEvents() { return api.get('/organizer/events').then(res => res.data); }
 export function createEvent(payload) { return api.post('/events', payload).then(res => res.data); }
+
 export function updateEvent(eventId, payload) { return api.put(`/events/${eventId}`, payload).then(res => res.data); }
 export function deleteEvent(eventId) { return api.delete(`/events/${eventId}`).then(res => res.data); }
 
