@@ -28,6 +28,7 @@ export async function register(payload, role = 'ROLE_ATTENDEE') {
 }
 
 export async function login(payload) {
+  
   return api.post('/auth/login', payload).then(res => res.data);
 }
 
