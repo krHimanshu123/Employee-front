@@ -13,6 +13,7 @@ export function deleteEvent(eventId) { return api.delete(`/events/${eventId}`).t
 
 export function listSessions(eventId) { return api.get(`/events/${eventId}/sessions`).then(res => res.data); }
 export function createSession(eventId, session) { return api.post(`/events/${eventId}/sessions`, session).then(res => res.data); }
+
 export function updateSession(eventId, sessionId, session) { return api.put(`/events/${eventId}/sessions/${sessionId}`, session).then(res => res.data); }
 export function deleteSession(eventId, sessionId) { return api.delete(`/events/${eventId}/sessions/${sessionId}`).then(res => res.data); }
 
