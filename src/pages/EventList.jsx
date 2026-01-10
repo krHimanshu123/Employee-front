@@ -10,6 +10,7 @@ export default function EventList() {
   const { user } = useAuth?.() || {};
   const location = useLocation();
 
+  
   useEffect(() => {
     setLoading(true);
 
