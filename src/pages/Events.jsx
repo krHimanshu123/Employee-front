@@ -12,6 +12,7 @@ export default function Events() {
     (async () => {
       setLoading(true);
       try {
+        
         const res = await fetchPublishedEvents();
         setEvents(res.data ?? res ?? []);
       } catch (err) {
