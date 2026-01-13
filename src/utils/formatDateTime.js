@@ -20,6 +20,7 @@ export function formatDateTime(iso) {
   }
 }
 
+
 export function formatTimeRange(startIso, endIso) {
   if (!startIso && !endIso) return '';
   if (!startIso) return formatDateTime(endIso);
